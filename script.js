@@ -5,16 +5,16 @@ const caixaResultado = document.querySelector('.caixa-resultado');
 
 const perguntas = [ //serve para abrir lista de perguntas
     {//abre o objeto das perguntas
-        enunciado: "Você acha que a inteligencia artificial pode afetar o desenvolvimento humano?"
-        alternativas: ["sim","não "]
+        enunciado: "depay faz golhj ou nn",
+        alternativas: ["ss","nn"]
     },
     {
-        enunciado: "Você ultiliza com frequencia?",
-        alternativas: ["sim","as vezes", "não"]
+        enunciado: "Pergunta 2",
+        alternativas: ["Alternativa 1","Alternativa 2"]
     },
     {
-        enunciado: "Voê acretida que todos o Humanos estão preparados para usar as IA's ?"
-        alternativas: ["Sim","Não"]
+        enunciado: "Pergunta 3",
+        alternativas: ["Alternativa 1","Alternativa 2"]
     }
 ]
 
@@ -27,7 +27,10 @@ function mostraPergunta(){
     mostraAlternativas();
 }
 function mostraAlternativas(){
-    
+    for(const alternativa of perguntaAtual.alternativas){
+        const botaoAlternativas = document.createElement("button");
+        botaoAlternativas.textContent = alternativa;
+        caixaAlternativas.appendChild(botaoAlternativas);
+    }
 }
-
 mostraPergunta();
